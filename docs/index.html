@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Car Logo Classifier</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">CarLogoClassifier</div>
+
+      <div class="nav-links">
+        <a href="#about">Про проєкт</a>
+        <a href="#models">Моделі</a>
+        <a href="#results">Результати</a>
+        <a href="#demo">Демо</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="badge">Deep Learning · PyTorch · Grayscale CNN</span>
+
+        <h1>Система розпізнавання автомобільних емблем</h1>
+
+        <p>
+          Вебдемонстрація проєкту класифікації автомобільних брендів за зображеннями
+          емблем із використанням власної CNN-моделі та ResNet18, адаптованої для
+          grayscale-зображень.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="btn primary"
+            href="https://huggingface.co/spaces/vladghanistan/car-logo-classifier"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Спробувати демо
+          </a>
+
+          <a
+            class="btn secondary"
+            href="https://github.com/v1ncentq/CarLogoClassifierModel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub репозиторій
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Підтримувані моделі</h3>
+
+        <div class="model-mini-card">
+          <span>01</span>
+          <div>
+            <h4>Custom CNN</h4>
+            <p>Власна згорткова нейронна мережа для класифікації емблем.</p>
+          </div>
+        </div>
+
+        <div class="model-mini-card">
+          <span>02</span>
+          <div>
+            <h4>ResNet18 Gray</h4>
+            <p>ResNet18, адаптована для одноканальних grayscale-зображень.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-label">Про проєкт</span>
+        <h2>Що робить система?</h2>
+      </div>
+
+      <div class="grid two-columns">
+        <div class="text-block">
+          <p>
+            Проєкт реалізує систему автоматичного розпізнавання автомобільного бренду
+            за зображенням емблеми. Користувач може завантажити зображення логотипа,
+            обрати модель класифікації та отримати прогноз із top-3 ймовірностями.
+          </p>
+
+          <p>
+            Особливість системи полягає в тому, що модель працює з одноканальними
+            grayscale-зображеннями. Це означає, що класифікація виконується не за
+            кольоровими підказками, а за формою, контуром та структурою емблеми.
+          </p>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item">
+            <strong>Тип задачі</strong>
+            <span>Багатокласова класифікація зображень</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Вхідні дані</strong>
+            <span>Grayscale-зображення автомобільної емблеми</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Фреймворк</strong>
+            <span>Python, PyTorch, Torchvision</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Демо</strong>
+            <span>Gradio на Hugging Face Spaces</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section accent-section">
+      <div class="section-header">
+        <span class="section-label">Pipeline</span>
+        <h2>Як працює система?</h2>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <span>1</span>
+          <h3>Upload image</h3>
+          <p>Користувач завантажує зображення автомобільної емблеми.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <span>2</span>
+          <h3>Preprocessing</h3>
+          <p>Зображення переводиться у grayscale, масштабується та нормалізується.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <span>3</span>
+          <h3>Model inference</h3>
+          <p>Обрана модель виконує класифікацію зображення.</p>
+        </div>
+
+        <div class="pipeline-step">
+          <span>4</span>
+          <h3>Prediction</h3>
+          <p>Система повертає predicted class, confidence та top-3 результати.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="section">
+      <div class="section-header">
+        <span class="section-label">Моделі</span>
+        <h2>Порівняння архітектур</h2>
+      </div>
+
+      <div class="grid two-columns">
+        <article class="model-card">
+          <h3>Custom CNN</h3>
+
+          <p>
+            Власна згорткова нейронна мережа, створена спеціально для задачі
+            класифікації автомобільних емблем. Архітектура складається зі згорткових
+            блоків, BatchNorm, ReLU, MaxPooling, Adaptive Average Pooling та
+            повнозв’язного класифікатора.
+          </p>
+
+          <ul>
+            <li>Працює з одним вхідним каналом.</li>
+            <li>Має компактнішу архітектуру.</li>
+            <li>Добре підходить для демонстрації власної реалізації CNN.</li>
+          </ul>
+        </article>
+
+        <article class="model-card">
+          <h3>ResNet18 Gray</h3>
+
+          <p>
+            Модель ResNet18 була адаптована для grayscale-зображень шляхом зміни
+            першого згорткового шару. Фінальний класифікаційний шар також замінено
+            відповідно до кількості класів автомобільних брендів.
+          </p>
+
+          <ul>
+            <li>Глибша архітектура з residual-зв’язками.</li>
+            <li>Підходить для порівняння з власною CNN.</li>
+            <li>Може мати вищу якість, але є обчислювально складнішою.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="section-header">
+        <span class="section-label">Результати</span>
+        <h2>Метрики та аналіз якості</h2>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-value">0.8706</span>
+          <span class="metric-label">Accuracy</span>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-value">0.8763</span>
+          <span class="metric-label">Precision</span>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-value">0.8722</span>
+          <span class="metric-label">Recall</span>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-value">0.8684</span>
+          <span class="metric-label">F1-score</span>
+        </div>
+      </div>
+
+      <div class="result-note">
+        <p>
+          Наведені метрики є прикладом результатів тестування моделі на test-наборі.
+          Для фінальної версії сайту ці значення можна оновити відповідно до актуальних
+          результатів з файлів <code>reports/metrics/test_metrics.json</code> та
+          <code>reports/metrics/model_comparison.json</code>.
+        </p>
+      </div>
+
+      <div class="image-section">
+        <div>
+          <h3>Confusion Matrix</h3>
+          <p>
+            Матриця помилок дозволяє побачити, які класи модель розпізнає найкраще,
+            а які бренди найчастіше плутаються між собою.
+          </p>
+        </div>
+
+        <div class="image-placeholder">
+          <p>
+            Додай сюди файл:
+            <br />
+            <code>docs/assets/confusion_matrix.png</code>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo-section">
+      <div class="demo-card">
+        <span class="section-label">Онлайн-демо</span>
+
+        <h2>Протестуй класифікацію зображення</h2>
+
+        <p>
+          Натисни кнопку нижче, щоб перейти до Hugging Face Space. Там можна
+          завантажити зображення емблеми, обрати Custom CNN або ResNet18 Gray та
+          отримати top-3 прогнози.
+        </p>
+
+        <a
+          class="btn primary large"
+          href="https://huggingface.co/spaces/vladghanistan/car-logo-classifier"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Відкрити Gradio Demo
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Car Logo Classifier · Deep Learning Project · Python / PyTorch / Gradio
+    </p>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" type="button">
+      ↑
+    </button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
