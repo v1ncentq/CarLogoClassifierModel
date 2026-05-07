@@ -1,0 +1,16 @@
+epochs: 60
+
+learning_rate: 0.0003
+optimizer_name: "adamw"
+weight_decay: 0.0001
+
+scheduler_name: "step_lr"
+step_size: 10
+gamma: 0.5
+
+criterion_name: "cross_entropy"
+
+device: "cuda"
+save_best_only: true
+
+early_stopping_patience: 10

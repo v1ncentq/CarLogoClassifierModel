@@ -1,0 +1,24 @@
+[
+    {
+        "model": "Custom CNN",
+        "weights_path": "saved_models/cnn/model_cnn.pth",
+        "loss": 0.4492167324166406,
+        "accuracy": 0.8911764705882353,
+        "precision": 0.8924040581781832,
+        "recall": 0.891087048727071,
+        "f1": 0.8895721578755116,
+        "parameters": 1207528,
+        "avg_inference_time_sec": 0.0009676400352926815
+    },
+    {
+        "model": "ResNet18 Gray",
+        "weights_path": "saved_models/resnet18_gray/model_resnet18_gray.pth",
+        "loss": 0.35358792859849264,
+        "accuracy": 0.9088235294117647,
+        "precision": 0.9093022185661737,
+        "recall": 0.9048954122201014,
+        "f1": 0.9052716692274717,
+        "parameters": 11174344,
+        "avg_inference_time_sec": 0.0003486766534693101
+    }
+]

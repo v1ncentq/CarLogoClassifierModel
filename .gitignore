@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Models
+*.pth
+*.pt
+saved_models/
+hf_space/models/

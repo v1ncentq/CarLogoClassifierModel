@@ -1,0 +1,15 @@
+raw_data_dir: "data/raw"
+processed_data_dir: "data/processed"
+splits_dir: "data/splits"
+
+image_size: [224, 224]
+grayscale: true
+normalize: true
+
+train_split: 0.7
+val_split: 0.15
+test_split: 0.15
+
+batch_size: 16
+num_workers: 2
+random_state: 42
