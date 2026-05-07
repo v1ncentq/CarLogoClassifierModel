@@ -221,6 +221,7 @@
 
         <div class="image-card">
             <img src="assets/confusion_matrix.png" alt="Confusion Matrix" />
+            <p class="image-caption">Створено на основі власної моделі CNN (Custom CNN)</p>
         </div>
       </div>
     </section>
@@ -231,21 +232,50 @@
 
         <h2>Протестуй класифікацію зображення</h2>
 
-        <p>
-          Натисни кнопку нижче, щоб перейти до Hugging Face Space. Там можна
-          завантажити зображення емблеми, обрати Custom CNN або ResNet18 Gray та
-          отримати top-3 прогнози.
+    <p>
+      Натисни кнопку нижче, щоб перейти до Hugging Face Space. Там можна
+      завантажити зображення емблеми, обрати Custom CNN або ResNet18 Gray та
+      отримати top-3 прогнози.
+    </p>
+
+    <div class="demo-warning">
+      <h3>Важлива примітка перед запуском демо</h3>
+
+      <p>
+        Поточна версія системи навчена розпізнавати <strong>8 класів автомобільних емблем</strong>.
+        Тому для коректного тестування потрібно завантажувати зображення емблем однієї
+        з таких марок:
+      </p>
+
+      <ul class="brand-list">
+        <li>Hyundai</li>
+        <li>Lexus</li>
+        <li>Mazda</li>
+        <li>Mercedes</li>
+        <li>Opel</li>
+        <li>Skoda</li>
+        <li>Toyota</li>
+        <li>Volkswagen</li>
+      </ul>
+
+      <p>
+        Якщо завантажити емблему іншого бренду, модель все одно обере один із цих
+        8 класів, але такий результат не можна вважати коректною класифікацією.
+        </p>
+        <p>Також, зображення емблеми не повинно займати дуже малу частину кадру, інакше модель може не розпізнати її форму та структуру. 
         </p>
 
-        <a
-          class="btn primary large"
-          href="https://huggingface.co/spaces/vladghanistan/car-logo-classifier"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Відкрити Gradio Demo
-        </a>
-      </div>
+    </div>
+
+    <a
+      class="btn primary large"
+      href="https://huggingface.co/spaces/vladghanistan/car-logo-classifier"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Відкрити демо
+    </a>
+  </div>
     </section>
   </main>
 
