@@ -275,7 +275,8 @@
                 <h3 class="title is-3">Confusion Matrix</h3>
                 <p>
                   Матриця помилок дозволяє побачити, які класи модель розпізнає найкраще,
-                  а які бренди найчастіше плутаються між собою.
+                  а які бренди найчастіше плутаються між собою. Це допомагає зрозуміти сильні та слабкі сторони моделі та можливі напрямки для покращення.
+                  <strong>Зверніть увагу, що ця матриця була створена на основі результатів Custom CNN</strong>
                 </p>
               </div>
 
@@ -286,6 +287,71 @@
                 </figure>
               </div>
             </div>
+          <div class="column is-12">
+            <div class="section-head has-text-centered training-curves-head">
+              <span class="tag is-info is-light">Training curves</span>
+              <h3 class="title is-3">Графіки навчання моделі</h3>
+            </div>
+          </div>
+
+          <div class="column is-12">
+            <div class="columns is-vcentered is-variable is-8">
+              <div class="column is-half">
+                <figure class="card visual-result training-curve-card">
+                  <img
+                    src="assets/training_validation_loss.png"
+                    alt="Training and Validation Loss"
+                  />
+                  <figcaption class="has-text-grey">
+                    <strong>Training and Validation Loss.</strong>
+                    На графіку видно, що train loss швидко зменшується майже до нуля,
+                    тоді як validation loss після початкового падіння стабілізується.
+                    Це свідчить про якісне навчання моделі, але також показує певний
+                    розрив між тренувальною та валідаційною помилкою.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="column is-half result-description">
+                <h3 class="title is-3">Аналіз функції втрат</h3>
+                <p>
+                  Функція втрат показує, наскільки сильно модель помиляється під час класифікації.
+                  Зменшення train loss означає, що модель успішно вивчає закономірності
+                  тренувального набору. Стабілізація validation loss показує, що після певної
+                  кількості епох модель уже майже не покращує якість на нових даних.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-12">
+            <div class="columns is-vcentered is-variable is-8">
+              <div class="column is-half result-description">
+                <h3 class="title is-3">Аналіз точності</h3>
+                <p>
+                  Графік точності демонструє, що train accuracy майже досягає максимального
+                  значення, а validation accuracy стабілізується приблизно на рівні 0.89–0.90.
+                  Це означає, що модель добре класифікує тренувальні приклади та зберігає
+                  достатньо високу якість на валідаційних даних.
+                </p>
+              </div>
+
+              <div class="column is-half">
+                <figure class="card visual-result training-curve-card">
+                  <img
+                    src="assets/training_validation_accuracy.png"
+                    alt="Training and Validation Accuracy"
+                  />
+                  <figcaption class="has-text-grey">
+                    <strong>Training and Validation Accuracy.</strong>
+                    На графіку показано зростання точності моделі під час навчання.
+                    Висока validation accuracy підтверджує, що модель здатна узагальнювати
+                    ознаки автомобільних емблем на нових зображеннях.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
