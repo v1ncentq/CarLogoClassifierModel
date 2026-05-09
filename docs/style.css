@@ -660,6 +660,33 @@ button.button.is-primary.is-rounded {
   color: #087A61;
 }
 
+.training-curves-head {
+  margin-top: 3rem;
+}
+
+.training-curves-intro {
+  max-width: 760px;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.training-curve-card {
+  padding: 1rem;
+}
+
+.training-curve-card img {
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.training-curve-card figcaption {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+
 @keyframes fadeUp {
   from {
     opacity: 0;
