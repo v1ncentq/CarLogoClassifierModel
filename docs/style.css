@@ -819,3 +819,404 @@ button.button.is-primary.is-rounded {
     padding: 1.25rem;
   }
 }
+
+/* =========================
+   Mobile and tablet layout
+   ========================= */
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 30px rgba(0, 71, 187, 0.06);
+  }
+
+  .navbar-menu {
+    border-radius: 0 0 22px 22px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 20px 40px rgba(0, 71, 187, 0.08);
+  }
+
+  .navbar-end .navbar-item {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .navbar-end .navbar-item::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-body {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    margin-top: 2rem;
+  }
+
+  .visual-panel {
+    padding: 1.5rem;
+  }
+
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-head {
+    text-align: center;
+  }
+
+  .project-copy {
+    text-align: center;
+  }
+
+  .info-grid,
+  .model-card,
+  .demo-card,
+  .callout-box,
+  .visual-result,
+  .pipeline-step {
+    border-radius: 22px;
+  }
+
+  .result-description {
+    text-align: center;
+  }
+
+  .result-description p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .demo-actions {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    line-height: 1.55;
+  }
+
+  .navbar {
+    padding: 0.85rem 1rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+    max-width: 220px;
+    white-space: normal;
+  }
+
+  .navbar-burger {
+    color: var(--accent);
+  }
+
+  .hero-body {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .hero-copy .tag,
+  .section-head .tag,
+  .demo-card .tag {
+    max-width: 100%;
+    white-space: normal;
+    height: auto;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .hero-copy .title {
+    font-size: 2.15rem !important;
+    line-height: 1.15;
+  }
+
+  .hero-copy .subtitle {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-visual {
+    padding: 1.25rem;
+    border-radius: 24px;
+  }
+
+  .hero-visual::before {
+    inset: 0.65rem;
+    border-radius: 18px;
+  }
+
+  .visual-badge {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .visual-panel {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .model-mini-card {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .model-mini-card .title {
+    font-size: 1.05rem !important;
+  }
+
+  .model-mini-card p {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 3.25rem 1rem;
+  }
+
+  .section-head .title {
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+  }
+
+  .project-copy p,
+  .model-copy,
+  .result-description p,
+  .callout-box p,
+  .training-curve-card figcaption {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .info-grid {
+    padding: 1rem;
+    border-radius: 22px;
+  }
+
+  .info-card {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .pipeline-step .card-content,
+  .model-card .card-content,
+  .side-card .card-content {
+    padding: 1.35rem;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pipeline-step {
+    text-align: center;
+  }
+
+  .brand-strip {
+    margin-top: 1.5rem;
+  }
+
+  .brand-strip .tags {
+    justify-content: center;
+    gap: 0.55rem;
+  }
+
+  .brand-strip .tag {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .model-card {
+    margin-bottom: 1rem;
+  }
+
+  .model-card ul {
+    padding-left: 1.2rem;
+  }
+
+  .model-card ul li {
+    font-size: 0.95rem;
+  }
+
+  .visual-result {
+    padding: 0.75rem;
+    border-radius: 22px;
+  }
+
+  .visual-result.image {
+    height: auto;
+  }
+
+  .visual-result.image img {
+    position: static;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .metrics-result img,
+  .training-curve-card img,
+  .visual-result img {
+    border-radius: 16px;
+  }
+
+  .visual-result figcaption {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .training-curves-head {
+    margin-top: 2rem;
+  }
+
+  .training-curve-card {
+    padding: 0.75rem;
+  }
+
+  .demo-card {
+    text-align: center;
+  }
+
+  .demo-actions {
+    margin-bottom: 1.5rem;
+  }
+
+  .button.demo-open-button {
+    width: 100%;
+    min-height: 3rem;
+    justify-content: center;
+  }
+
+  .callout-box {
+    padding: 1.35rem;
+    text-align: left;
+  }
+
+  .callout-box .title {
+    font-size: 1.25rem !important;
+    line-height: 1.35;
+  }
+
+  .brand-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .brand-list li {
+    margin-bottom: 0;
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(0, 71, 187, 0.08);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem 4.5rem;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+
+  #scrollTopBtn {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-copy .title {
+    font-size: 1.8rem !important;
+  }
+
+  .section-head .title {
+    font-size: 1.65rem !important;
+  }
+
+  .result-description .title,
+  .demo-card .title {
+    font-size: 1.45rem !important;
+  }
+
+  .hero-copy .subtitle,
+  .project-copy p,
+  .model-copy,
+  .result-description p,
+  .callout-box p {
+    font-size: 0.92rem;
+  }
+
+  .hero-visual {
+    padding: 1rem;
+  }
+
+  .visual-panel {
+    padding: 0.85rem;
+  }
+
+  .info-grid,
+  .callout-box,
+  .model-card,
+  .demo-card,
+  .pipeline-step,
+  .visual-result {
+    border-radius: 18px;
+  }
+
+  .pipeline-step .card-content,
+  .model-card .card-content,
+  .side-card .card-content {
+    padding: 1rem;
+  }
+
+  .training-curve-card figcaption {
+    font-size: 0.82rem;
+  }
+
+  .brand-list li {
+    font-size: 0.8rem;
+  }
+}
