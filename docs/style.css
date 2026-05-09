@@ -515,6 +515,7 @@ section.has-background-light {
 
 .callout-box .title {
   margin-bottom: 1rem;
+  color: orangered;
 }
 
 .callout-box p {
